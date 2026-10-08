@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#05020c">
+  <title>A Little Surprise For You</title>
+
+  <!-- Optional web fonts (the page still works offline with the fallbacks in style.css) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-state="GIFT">
+
+  <!-- ========== BACKGROUND LAYERS ========== -->
+  <canvas id="bg" aria-hidden="true"></canvas>   <!-- stars + drifting dust -->
+  <div id="atmos" aria-hidden="true"></div>       <!-- soft glow behind the heart -->
+  <div id="dim" aria-hidden="true"></div>         <!-- cinematic darkening around the gift -->
+
+  <!-- ========== GIFT SCENE ========== -->
+  <main class="scene" id="scene">
+    <div class="gift" id="gift">
+      <div class="gift-glow"></div>
+      <span class="sp"></span><span class="sp"></span><span class="sp"></span>
+      <span class="sp"></span><span class="sp"></span><span class="sp"></span>
+
+      <div class="gift-box" id="giftBox">
+        <div class="gift-light"></div>
+        <div class="gift-body">
+          <div class="ribbon-v"></div>
+        </div>
+        <div class="gift-lid">
+          <div class="ribbon-v"></div>
+          <div class="bow"><i></i></div>
+        </div>
+      </div>
+      <div class="gift-shadow"></div>
+    </div>
+
+    <p class="tagline" id="tagline">There's a little surprise for you...</p>
+    <button class="open-btn" id="openBtn" type="button" aria-label="Open your gift">OPEN GIFT</button>
+  </main>
+
+  <!-- Particles are drawn here (sits above the gift so the explosion covers it) -->
+  <canvas id="fx" aria-hidden="true"></canvas>
+
+  <div id="countdown" role="status" aria-live="assertive" aria-atomic="true"></div>
+  <div id="flash" aria-hidden="true"></div>
+
+  <!-- ========== FINAL MESSAGE + CONTROLS ========== -->
+  <div id="bottom">
+    <div id="final" aria-live="polite">
+      <p class="message" id="message"></p>
+      <p class="message2" id="message2"></p>
+    </div>
+
+    <div id="colorPanel" role="group" aria-label="Heart colour" hidden>
+      <button class="swatch" type="button" data-color="#ff1f3d" aria-label="Red" aria-pressed="false" title="Red">❤️</button>
+      <button class="swatch" type="button" data-color="#ff1493" aria-label="Pink" aria-pressed="false" title="Pink">💗</button>
+      <button class="swatch" type="button" data-color="#a855f7" aria-label="Purple" aria-pressed="false" title="Purple">💜</button>
+      <button class="swatch" type="button" data-color="#3b82f6" aria-label="Blue" aria-pressed="false" title="Blue">💙</button>
+      <button class="swatch" type="button" data-color="#22e5ff" aria-label="Cyan" aria-pressed="false" title="Cyan">🩵</button>
+      <button class="swatch" type="button" data-color="#2ee67a" aria-label="Green" aria-pressed="false" title="Green">💚</button>
+      <button class="swatch" type="button" data-color="#ff8a1f" aria-label="Orange" aria-pressed="false" title="Orange">🧡</button>
+      <button class="swatch" type="button" data-color="#f4f4ff" aria-label="White" aria-pressed="false" title="White">🤍</button>
+      <button class="swatch" type="button" data-color="rainbow" aria-label="Rainbow" aria-pressed="false" title="Rainbow">🌈</button>
+      <label class="picker" title="Pick any colour">
+        <span class="sr-only">Custom colour</span>
+        <input type="color" id="colorPicker" value="#ff1493" aria-label="Pick a custom colour">
+      </label>
+    </div>
+
+    <div id="controls" role="toolbar" aria-label="Gift controls">
+      <button class="ctl" id="colorBtn" type="button" aria-label="Change heart colour" aria-expanded="false" aria-controls="colorPanel"><span aria-hidden="true">🎨</span> Change Color</button>
+      <button class="ctl" id="replayBtn" type="button" aria-label="Replay the gift from the start"><span aria-hidden="true">🔄</span> Replay</button>
+      <button class="ctl" id="newHeartBtn" type="button" aria-label="Form a new heart"><span aria-hidden="true">✨</span> New Heart</button>
+      <button class="ctl" id="soundBtn" type="button" aria-label="Sound on" aria-pressed="true"><span id="soundIcon" aria-hidden="true">🔊</span> Sound</button>
+    </div>
+  </div>
+
+  <noscript><p style="position:fixed;inset:0;display:grid;place-items:center;color:#fff;text-align:center;padding:2rem">This little gift needs JavaScript to open 💝</p></noscript>
+
+  <script src="script.js"></script>
+</body>
+</html>
