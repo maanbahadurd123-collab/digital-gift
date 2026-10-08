@@ -12,12 +12,12 @@ const CONFIG = {
 
   // ----- Heart -----
   heartColor: "#ff1493",     // any CSS hex colour, or "rainbow"
-  heartSize: 250,            // heart width ≈ heartSize × 1.6 px (it shrinks automatically to fit the screen)
+  heartSize: 220,            // heart width ≈ heartSize × 1.6 px (it shrinks automatically to fit the screen)
 
   // ----- Particles -----
   particleCount: 2000,        // desktop count (phones/weak devices are reduced automatically)
   particleSize: 2,           // base particle radius in px
-  particleGlow: 17,          // halo size around each particle
+  particleGlow: 14,          // halo size around each particle
   autoAdjustParticles: false, // lower the count on small / weak devices
   maxPixelRatio: 2,          // cap for devicePixelRatio (lower = faster)
 
