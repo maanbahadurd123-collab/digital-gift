@@ -15,7 +15,7 @@ const CONFIG = {
   heartSize: 220,            // heart width ≈ heartSize × 1.6 px (it shrinks automatically to fit the screen)
 
   // ----- Particles -----
-  particleCount: 2000,        // desktop count (phones/weak devices are reduced automatically)
+  particleCount: 1200,        // desktop count (phones/weak devices are reduced automatically)
   particleSize: 2,           // base particle radius in px
   particleGlow: 14,          // halo size around each particle
   autoAdjustParticles: false, // lower the count on small / weak devices
@@ -33,8 +33,8 @@ const CONFIG = {
 
   // ----- Text -----
   introText: "There's a little surprise for you...",
-  message: "Made just for you ❤️",
-  secondaryMessage: "Some things are better felt than said.",
+  message: "For the special person❤️",
+  secondaryMessage: "I love you so much.",
   showSecondaryMessage: true,
 
   // ----- Features -----
