@@ -15,10 +15,10 @@ const CONFIG = {
   heartSize: 250,            // heart width ≈ heartSize × 1.6 px (it shrinks automatically to fit the screen)
 
   // ----- Particles -----
-  particleCount: 700,        // desktop count (phones/weak devices are reduced automatically)
+  particleCount: 2000,        // desktop count (phones/weak devices are reduced automatically)
   particleSize: 2,           // base particle radius in px
-  particleGlow: 15,          // halo size around each particle
-  autoAdjustParticles: true, // lower the count on small / weak devices
+  particleGlow: 17,          // halo size around each particle
+  autoAdjustParticles: false, // lower the count on small / weak devices
   maxPixelRatio: 2,          // cap for devicePixelRatio (lower = faster)
 
   // ----- Animation (milliseconds) -----
@@ -29,7 +29,7 @@ const CONFIG = {
   animationSpeed: 1,         // 1 = normal, 2 = twice as fast, 0.5 = slow motion
 
   // ----- Glow -----
-  glowIntensity: 30,         // 0 – 100
+  glowIntensity: 50,         // 0 – 100
 
   // ----- Text -----
   introText: "There's a little surprise for you...",
