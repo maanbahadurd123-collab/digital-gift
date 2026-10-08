@@ -34,7 +34,7 @@ const CONFIG = {
   // ----- Text -----
   introText: "There's a little surprise for you...",
   message: "For the special person❤️",
-  secondaryMessage: "I love you so much.",
+  secondaryMessage: "you will be always my special",
   showSecondaryMessage: true,
 
   // ----- Features -----
