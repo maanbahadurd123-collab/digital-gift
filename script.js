@@ -33,8 +33,8 @@ const CONFIG = {
 
   // ----- Text -----
   introText: "There's a little surprise for you...",
-  message: "For the special person❤️",
-  secondaryMessage: "you will be always my special",
+  message: "For the my cute sister❤️",
+  secondaryMessage: "BE HAPPY. TAKE CARE",
   showSecondaryMessage: true,
 
   // ----- Features -----
